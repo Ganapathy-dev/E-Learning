@@ -65,7 +65,6 @@
 {% block domready %}
   $('#modules').sortable({
     stop: function(event, ui) {
-      console.log("==============>inside the drager")
       modules_order = {};
       $('#modules').children().each(function(){
         // update the order field
