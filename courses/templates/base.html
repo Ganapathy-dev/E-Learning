@@ -10,6 +10,9 @@
   <div id="header">
     <a href="/" class="logo">Educa</a>
     <ul class="menu">
+      {% if request.user %}
+      <strong>{{ request.user }}</strong>
+      {% endif %}
       {% if request.user.is_authenticated %}
         <li><a href="{% url "logout" %}">Sign out</a></li>
       {% else %}
